@@ -21,12 +21,7 @@ public class LinguaAbstractTest {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-
-//    }
-//
-//    @BeforeEach
-//    void Entrance(){
-        Assertions.assertDoesNotThrow(()-> driver.navigate().to("https://lingualeo.com/ru"),
+       Assertions.assertDoesNotThrow(()-> driver.navigate().to("https://lingualeo.com/ru"),
                 "Страница не доступна");
         EntranceLingua entranceLingua = new EntranceLingua(getDriver());
         entranceLingua
@@ -36,25 +31,20 @@ public class LinguaAbstractTest {
                 .clickMail()
                 .clickPassword()
                 .clickEnter();
-
-    }
-//    @AfterEach
-//    void Exit(){
-//        ExitLingua exitLingua = new ExitLingua(getDriver());
-//        exitLingua
-//                .ExitLingua();
-
-//        Assertions.assertEquals("https://lingualeo.com/ru", getDriver().getCurrentUrl());
-
-   // }
+   }
 
     @AfterAll
     static void close(){
+        ExitLingua exitLingua = new ExitLingua(getDriver());
+        exitLingua
+                .ExitLingua();
+
+        Assertions.assertEquals("https://lingualeo.com/ru", getDriver().getCurrentUrl());
+
         if(driver !=null) driver.quit();
 
     }
     public static WebDriver getDriver(){
-
         return driver;
     }
 }

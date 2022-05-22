@@ -17,12 +17,7 @@ public class ExitLingua extends LinguaAbstractPage{
     public void ExitLingua(){
         Actions actions = new Actions(getDriver());
         actions.moveToElement(profile).build().perform();
-//        exit.click();
-
-    }
-
-    public ExitLingua clickExit(){
         exit.click();
-        return this;
+
     }
 }
