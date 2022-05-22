@@ -26,6 +26,7 @@ public class Dictionary {
 
         WebElement webElement2 = driver.findElement(By.cssSelector(".ll-leokit__button.ll-ModalAuthAlt__switch"));
         webElement2.click();
+
         WebElement webElement3 = driver.findElement(By.cssSelector("[placeholder=E-mail]"));
         webElement3.click();
         webElement3.sendKeys("ng20101980@yandex.ru");
@@ -44,8 +45,10 @@ public class Dictionary {
         WebElement webElement7 = driver.findElement(By.xpath("//div[@class ='ll-application__content-inner ll-application__content-inner__m-with-sidebar']//ul/li[2]/div"));
         webElement7.click();
 
-        WebElement webElement8 = driver.findElement(By.xpath("//div[@class = 'sets-words false']//label[@for='new']"));
+        WebElement webElement8 = driver.findElement(By.xpath("//div[@id='filter-header']/div[1]/div[1]/div[1]/label"));
         webElement8.click();
+
+
         //driver.quit();
     }
 }
