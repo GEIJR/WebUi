@@ -42,7 +42,7 @@ public class GiftLingua extends  LinguaAbstractPage{
         exit.click();
         return this;
     }
-    void Postcard(){
+    public void Postcard(){
         Actions postcard = new Actions(getDriver());
         postcard.click(background)
                 .click(sender)
